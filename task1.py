@@ -1,33 +1,30 @@
 '''
-* ISAT 6250-1
-* Assignment: Python Basics & Tools
+* ISAT 6250-1 Assignment: Python Basics & Tools
 * 09/14/2024
 * Shiron Thalagala (W0793591)
 '''
+
 # Function to calculate median of a given set of numbers
 def findMedian(numArray):
-    sum = 0
-    for n in numArray:
-        sum = sum + n
-    median = sum/len(numArray)
+    median = (numArray[1] + numArray[2]) / 2
 
     return(median)
 
 
 # Function to find if the input number is prime or not
 def checkPrime(num):
-    isPrime = False
-    if num > 1:
+    if num == 2: 
+        isPrime = True
+    elif num > 1:
         for n in range(2, num):
             if num % n == 0:
                 isPrime = False
                 break                
             else:
-                isPrime = True
-                
+                isPrime = True          
     else:
         isPrime = False
-    
+        
     return isPrime
 
 
@@ -45,7 +42,6 @@ print(f"\nThe median is {median}\n")
 
 
 # Check for prime numbers using the checkPrime function
-
 for number in numArray:
     if checkPrime(number):
         print(f"{number} is a prime number")
